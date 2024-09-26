@@ -1,4 +1,5 @@
 import 'package:cookbook_flutter/Animation/animate_page_route_transition.dart';
+import 'package:cookbook_flutter/Animation/animate_widget_physics_simulation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AnimatePageRouteTransition(),
+      home: AnimateWidgetPhysicsSimulation(),
     );
   }
 }
