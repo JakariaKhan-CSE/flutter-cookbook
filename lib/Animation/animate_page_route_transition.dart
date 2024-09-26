@@ -22,7 +22,15 @@ Route _createRoute()
   return PageRouteBuilder(
       pageBuilder: (context, animation, secondariAnimation)=>const Page2(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        return child;
+        // ai value er karone bottom theke top a page animated vabe ashse
+        const begin = Offset(0.0, 1.0);  // this value works new page animation start from bottom
+        const end = Offset.zero;
+        const curve = Curves.ease;  // start quickly and end slowly
+        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+       
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,);
     },
   );
 }
