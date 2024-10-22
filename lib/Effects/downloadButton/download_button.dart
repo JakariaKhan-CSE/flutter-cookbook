@@ -1,4 +1,5 @@
 import 'package:cookbook_flutter/Effects/downloadButton/button_shape_widget.dart';
+import 'package:cookbook_flutter/Effects/downloadButton/progress_indicator_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -56,7 +57,13 @@ class DownloadButton extends StatelessWidget {
            child: Stack(
              alignment: Alignment.center,
              children: [
-
+               ProgressIndicatorWidget(
+                   downloadProgress: downloadProgress,
+                   isDownloading: _isDownloading,
+                   isFetching: _isFetching),
+              if(_isDownloading)
+                const Icon(Icons.stop, size: 14,
+                color: CupertinoColors.activeBlue,)
              ],
            ),
           ))

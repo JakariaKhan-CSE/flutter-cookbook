@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 @immutable
-class ProgressIndicator extends StatelessWidget {
-  const ProgressIndicator({super.key,
+class ProgressIndicatorWidget extends StatelessWidget {
+  const ProgressIndicatorWidget({super.key,
     required this.downloadProgress,
     required this.isDownloading,
     required this.isFetching});

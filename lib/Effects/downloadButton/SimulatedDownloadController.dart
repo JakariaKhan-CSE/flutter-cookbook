@@ -22,19 +22,27 @@ class SimulatedDownloadController extends DownloadController with ChangeNotifier
 
   @override
   void openDownload() { // this is  DownloadController property
-    if(downloadStatus == DownloadStatus.notDownloaded){
-
+    if(downloadStatus == DownloadStatus.downloaded){
+        _onOpenDownload();
     }
   }
 
   @override
   void startDownload() {
-    // TODO: implement startDownload
+    if (downloadStatus == DownloadStatus.notDownloaded) {
+      _doSimulatedDownload();
+    }
   }
 
   @override
   void stopDownload() {
-    // TODO: implement stopDownload
+    if(_isDownloading)
+      {
+        _isDownloading = false;
+        _downloadStatus = DownloadStatus.notDownloaded;
+        _progress = 0.0;
+        notifyListeners();
+      }
   }
 
   Future<void> _doSimulatedDownload()async{
