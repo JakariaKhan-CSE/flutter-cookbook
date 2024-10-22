@@ -5,6 +5,8 @@ import 'package:cookbook_flutter/Animation/opacity_animation.dart';
 import 'package:cookbook_flutter/Design/add_drawer_Screen.dart';
 import 'package:cookbook_flutter/Design/display_snackBar.dart';
 import 'package:cookbook_flutter/Design/update_ui_based_orientation.dart';
+import 'package:cookbook_flutter/Design/work_with_tabs.dart';
+import 'package:cookbook_flutter/Effects/downloadButton/create_download_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: UpdateUiBasedOrientation(),
+      home: CreateDownloadButton(),
     );
   }
 }
