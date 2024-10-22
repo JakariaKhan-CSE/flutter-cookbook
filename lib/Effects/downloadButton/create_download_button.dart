@@ -13,10 +13,29 @@ class CreateDownloadButton extends StatefulWidget {
 class _CreateDownloadButtonState extends State<CreateDownloadButton> {
    // late final List<DownloadController> _downloadController;
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    // write required code
+
+  }
+  void _openDownload(int index){
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Open App ${index+1}')));
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+    appBar:  AppBar(title: Text('Download Effect Demo'),centerTitle: true,),
+      // body: ListView.separated(
+      //     itemBuilder: itemBuilder,
+      //     separatorBuilder: separatorBuilder,
+      //     itemCount: itemCount),
     );
+  }
+  Widget _buildListItem(BuildContext context, int index){
+    final theme = Theme.of(context);
+    return ListTile();
   }
 }
 
