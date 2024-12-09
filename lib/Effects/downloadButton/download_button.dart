@@ -2,7 +2,6 @@ import 'package:cookbook_flutter/Effects/downloadButton/button_shape_widget.dart
 import 'package:cookbook_flutter/Effects/downloadButton/progress_indicator_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'download_controller.dart';
 
 

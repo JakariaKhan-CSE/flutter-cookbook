@@ -29,6 +29,7 @@ class SimulatedDownloadController extends DownloadController with ChangeNotifier
 
   @override
   void startDownload() {
+    //downloadStatus is function which get _downloadStatus value
     if (downloadStatus == DownloadStatus.notDownloaded) {
       _doSimulatedDownload();
     }
